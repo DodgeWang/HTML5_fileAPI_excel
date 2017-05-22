@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+       td,th{
+         font-size: 13px;
+         text-align: center;
+       }
+    </style>
+</head>
+
+<body>
+    <input type="file" id="Files" name="files[]" multiple/>
+    <div id="Lists"></div>
+    <h3>原始数据</h3>
+    <p id="fileInfo"></p>
+
+    <h3>解析后数据</h3>
+    <table id="tableInfo" border="1"></table>
+    <script>
+ 
+
+    if (window.File && window.FileList && window.FileReader && window.Blob) {
+        document.getElementById('Files').addEventListener('change', fileSelect, false);
+    } else {
+        document.write('您的浏览器不支持File Api');
+    }
+
+
+
+    function fileSelect(e){
+        e = e || window.event;
+        var files= this.files;
+        var p = document.getElementById('fileInfo');
+        var table =document.getElementById('tableInfo');
+        console.log(files)
+
+        var reader = new FileReader();
+        reader.onload = (function(file){
+            return function(e){
+                 var Infolist = this.result.split("\r\n");
+                 
+                 for(var i = 0; i<Infolist.length; i++){
+                    var newTr = document.createElement('tr');
+                    var dataList = Infolist[i].split(/\t/);
+
+                    for(var s = 0; s<dataList.length; s++){
+                        var newTd;
+                        if(i == 0){
+                            newTd = document.createElement('th');
+                        }else{
+                            newTd = document.createElement('td');   
+                        }
+                        newTd.innerText = dataList[s];
+                        newTr.appendChild(newTd)
+                    }
+                    table.appendChild(newTr)
+                 } 
+                 p.innerText=this.result
+
+
+                
+                
+                var excellist = [];
+                var nameList = Infolist[0].split(/\t/);
+                for(var i = 1; i<Infolist.length; i++){
+                    var obj = {};
+                    var dataList = Infolist[i].split(/\t/);
+                    for(var s = 0;s < dataList.length; s++){
+                        obj[nameList[s]] = dataList[s];
+                    }
+                    excellist.push(obj)
+                }
+
+                console.log(excellist)
+
+            }
+           
+        })(files[0])
+
+        reader.readAsText(files[0])
+
+    }
+    </script>
+</body>
+
+</html>
