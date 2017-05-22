@@ -1,0 +1,10 @@
+name	number	Grade	age	gender	header	custodian	father 	mother	s1t1	s2t1	s3t1	s1t2	s2t2	s3t2	absnce11	absence21	absence31	absence12	absence22	absence32	total absc
+Bai, xxx	000904	12	17	Female	No		Father	No	Financial Accounting	English 12, Universi		Financial Accounting	English 12, Universi		4	2		4	2		7
+Bai, xxx	001013	12	19	Male	No		Father	No	English for School a		English, Grade 10	English for School a		English, Grade 10	2		5	2		5	12
+Bao, xxx	001006	12	19	Male	No		Father	No	English, Grade 10	Physics, Grade 12	English 12, Universi	English, Grade 10	Physics, Grade 12	English 12, Universi	1	0	0	1	0	0	4
+Bi, xxxx	000963	12	18	Male	No																43
+Bian, xxxx	000950	12	17	Male	Yes	Liu, Aili	Father	No	Advanced Functions, 	English, Grade 11	Physics, Grade 12	Advanced Functions, 	English, Grade 11	Physics, Grade 12	0	1	0	0	1	0	1
+Cai,xxxx	000936	12	17	Female	Yes	Susan Zhang	Father		English, Grade 10	Biology, Grade 12	Calculus and Vectors	English, Grade 10	Biology, Grade 12	Calculus and Vectors	0	2	1	0	2	1	11
+Cao, xxxx	000906	12	19	Male	No		Father	No	Computer Science, Gr	English 12, Universi	Calculus and Vectors	Computer Science, Gr	English 12, Universi	Calculus and Vectors	3	5	5	3	5	5	28
+Chen, xxx	000850	12	18	Male	No		Father		Visual Art,Grade 12	Challenge and Change		Visual Art,Grade 12	Challenge and Change		4	6		4	6		18
+Zhuang, xxx	000739	12	19	Female	No		Father	No	Physics, Grade 12	English 12, Universi		Physics, Grade 12	English 12, Universi		4	2		4	2		8
